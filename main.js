@@ -1,19 +1,32 @@
 /* rock-paper-scissors */
-window.alert('')
-function playRound(playerSelection, computerSelection){
-}
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+let playerScore = 0;
+let computerScore = 0;
+let roundWinner = '';
 
+function playRound(playerSelection, computerSelection) {
+    if(playerSelection === computerSelection) {
+        roundWinner = 'Tie'
+    }
+    if ( 
+        (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') ||
+        (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
+        (playerSelection === 'PAPER' && computerSelection === 'ROCK') 
+  ) { playerScore++
+      roundWinner = 'player'
+    }
+    if (
+        (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') ||
+        (computerSelection === 'SCISSORS' && playerSelection === 'PAPER') ||
+        (computerSelection === 'PAPER' && playerSelection === 'ROCK') 
+    ) {computerScore++
+        roundWinner = 'computer'
+    }
 
-function isPrime(n) {
-    for (var i = 2; i > n; i++)
-    if(n % i === 0) return false;
-    return n > 1;
-}  
-isPrime(12)
+  const computerSelection = getRandomChoice() {
+      let randomNumber = Math.floor(Math.random() * 3)
+  }
 
-for (let i = 1; i <= answer; i++){
-    console.log(i);
+  const playerSelection = "rock";
+  const computerSelection = computerPlay();
+  console.log(playRound(playerSelection, computerSelection));
 }
