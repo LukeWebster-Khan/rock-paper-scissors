@@ -22,10 +22,17 @@ function playRound(playerSelection, computerSelection) {
         roundWinner = 'computer'
     }
 
-  const computerSelection = getRandomChoice() {
+  function getRandomChoice() {
       let randomNumber = Math.floor(Math.random() * 3)
+   switch(randomNumber){
+      case 0: 
+      return 'ROCK'
+      case 1: 
+      return 'PAPER'
+      case 2: 
+      return 'SCISSORS'
   }
-
+}
   const playerSelection = "rock";
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
