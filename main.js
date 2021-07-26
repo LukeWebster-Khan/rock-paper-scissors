@@ -33,6 +33,11 @@ function playRound(playerSelection, computerSelection) {
       return 'SCISSORS'
   }
 }
+
+function gameOver() {
+    return playerScore === 5 || computerScore === 5
+}
+
   const playerSelection = "rock";
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
