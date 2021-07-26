@@ -38,6 +38,9 @@ function gameOver() {
     return playerScore === 5 || computerScore === 5
 }
 
+const computerSelection = getRandomChoice()
+playRound(playerSelection, computerSelection)
+
   const playerSelection = "rock";
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
