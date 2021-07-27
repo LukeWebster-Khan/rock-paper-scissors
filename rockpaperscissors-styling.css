@@ -5,6 +5,10 @@
     margin: 0px 10px;
 }
 
+.score{
+    margin: 30px;
+}
+
 .buttons {
     display: flex;
     align-items: center;

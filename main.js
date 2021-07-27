@@ -39,6 +39,7 @@ function gameOver() {
 }
 
 // UI
+const scoreInfo = document.getElementsById('scoreInfo')
 const rockBtn = document.getElementById('rockBtn')
 const paperBtn = document.getElementById('paperBtn')
 const scissorBtn = document.getElementById('scissorBtn')
@@ -46,6 +47,16 @@ const scissorBtn = document.getElementById('scissorBtn')
 rockBtn.addEventListener('click', () => handleClick('ROCK'))
 paperBtn.addEventListener('click', () => handleClick('PAPER'))
 scissorBtn.addEventListener('click', () => handleClick('SCISSORS'))
+
+function updateScore() {
+    if (roundWinner === 'tie') {
+        scoreInfo.textContect = "Tie game!"
+    } else if (roundWinner === 'player') {
+        scoreInfo.textContect = 'You Won!'
+    } else if (roundWinner === 'computer') {
+        scoreInfo.textContect = 'You lost...'
+    }
+}
 
 
 const computerSelection = getRandomChoice()
