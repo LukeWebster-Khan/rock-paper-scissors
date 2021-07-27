@@ -38,6 +38,16 @@ function gameOver() {
     return playerScore === 5 || computerScore === 5
 }
 
+// UI
+const rockBtn = document.getElementById('rockBtn')
+const paperBtn = document.getElementById('paperBtn')
+const scissorBtn = document.getElementById('scissorBtn')
+
+rockBtn.addEventListener('click', () => handleClick('ROCK'))
+paperBtn.addEventListener('click', () => handleClick('PAPER'))
+scissorBtn.addEventListener('click', () => handleClick('SCISSORS'))
+
+
 const computerSelection = getRandomChoice()
 playRound(playerSelection, computerSelection)
 
