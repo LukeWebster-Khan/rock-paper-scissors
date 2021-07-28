@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color:blanchedalmond;
 }
 .selections {
   display: flex;
@@ -9,6 +9,8 @@ body {
   background: none;
   cursor: pointer;
   transition: 100ms;
+  padding: 50px;
+  font-size: 50px;
 }
 
 .selection:hover {
